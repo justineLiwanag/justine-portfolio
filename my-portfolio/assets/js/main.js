@@ -159,3 +159,34 @@ wrappers.forEach((wrapper) => {
   wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   wrapper.addEventListener("mouseleave", autoPlay);
 });
+
+
+
+//Contact
+$(document).ready(function() {
+  // Listen for form submission
+  $('#contactForm').submit(function(e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    var formData = $(this).serialize();
+
+    // Submit the form using AJAX
+    $.ajax({
+      url: $(this).attr('action'),
+      type: 'POST',
+      data: formData,
+      dataType: 'json',
+      success: function(response) {
+        // Handle the success response
+        console.log(response);
+        alert('Email sent successfully!');
+      },
+      error: function(error) {
+        // Handle the error response
+        console.log(error);
+        alert('Failed to send email.');
+      }
+    });
+  });
+});

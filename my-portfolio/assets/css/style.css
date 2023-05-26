@@ -107,7 +107,7 @@ body{
 }
 .home .image{
     flex: 1;
-    background-image: url("/assets/images/coffee farm-bro.png");
+    background-image: url("./assets/images/coffee farm-bro.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -154,9 +154,6 @@ body{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 30px;
 }
 /* about section */
-.about{
-   
-}
 .about-content{
     display: flex;
     width: 100%;
@@ -515,14 +512,25 @@ body{
     width: 100%;
     align-items: center; 
     min-height: 100vh;
-    border: var(--border);
+    flex-direction: column;
 }
 .contact-content{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.contact-content .content{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 70vh;
     align-items: center; 
-    
+    border-radius: 10px;
+    box-shadow: rgba(253, 250, 250, 0.35) 0px 5px 15px;
+    overflow: hidden;
 }
 .contact-content .heading{
     margin-bottom: 20px;
@@ -548,4 +556,70 @@ body{
     width: 80%;
     text-align: center;
     margin:15px auto 50px auto;
+}
+.contact-content .content .contact-form{
+    padding: 40px;
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+}
+.contact-form h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--second-text-color);
+    margin-bottom: 20px;
+}
+.contact-content .content input, .contact-form textarea{
+    width: 100%;
+    background: #2c2f48;
+    border: none;
+    color: #fff;
+    padding: 10px 10px 10px 20px;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #fff;
+    font-size: 1rem;
+}
+.contact-form textarea:focus{
+    background-color: none;
+}
+.contact-form .btn{
+    margin-top: 0px;
+    width: 100%;
+    border-radius: 10px;
+
+}
+.contact-form .btn:hover{
+    color: var(--second-text-color);
+    transition: .3s;
+}
+.contact-map{
+    flex: 2;
+    height: 100%;
+    margin-left: 20px;
+
+}
+.contact-map iframe{
+    width: 100%;
+    height: 70vh;
+}
+
+.contact-content .contact-form::-webkit-scrollbar, .contact-content .contact-form::-webkit-scrollbar{
+    background: none;
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 25vh;
+    margin-top: 100px;
+    background-color: rgba(35, 30, 30, 0.586);
 }
