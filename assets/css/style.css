@@ -557,3 +557,69 @@ body{
     text-align: center;
     margin:15px auto 50px auto;
 }
+.contact-content .content .contact-form{
+    padding: 40px;
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+}
+.contact-form h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--second-text-color);
+    margin-bottom: 20px;
+}
+.contact-content .content input, .contact-form textarea{
+    width: 100%;
+    background: #2c2f48;
+    border: none;
+    color: #fff;
+    padding: 10px 10px 10px 20px;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #fff;
+    font-size: 1rem;
+}
+.contact-form textarea:focus{
+    background-color: none;
+}
+.contact-form .btn{
+    margin-top: 0px;
+    width: 100%;
+    border-radius: 10px;
+
+}
+.contact-form .btn:hover{
+    color: var(--second-text-color);
+    transition: .3s;
+}
+.contact-map{
+    flex: 2;
+    height: 100%;
+    margin-left: 20px;
+
+}
+.contact-map iframe{
+    width: 100%;
+    height: 70vh;
+}
+
+.contact-content .contact-form::-webkit-scrollbar, .contact-content .contact-form::-webkit-scrollbar{
+    background: none;
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 25vh;
+    margin-top: 100px;
+    background-color: rgba(35, 30, 30, 0.586);
+}
